@@ -11,7 +11,7 @@ model = Sequential()
 
 model.add(Conv2D(16, (3,3), activation='relu', input_shape=(time_steps, num_features, 1), padding='same'))
 model.add(UpSampling2D((2,2)))
-model add(Conv2D(32, (3,3), activation='relu', padding='same'))
+model.add(Conv2D(32, (3,3), activation='relu', padding='same'))
 model.add(UpSampling2D((2,2)))
 model.add(Conv2D(32, (12,6), activation='relu', strides=(6, 1)))
 model.add(MaxPooling2D(pool_size=(2, 2), padding='same'))
