@@ -26,7 +26,6 @@ model.add(Dense(64, activation='relu'))
 model.add(Dense(15))
 
 opt = AdamW(learning_rate=0.0001)
-model.compile(loss=quantile_loss_75, optimizer=opt, metrics=[RootMeanSquaredError()])
 ```
 
 This architecture includes convolutional and fully connected layers, as well as upsampling and downsampling operations to process input time series data.
